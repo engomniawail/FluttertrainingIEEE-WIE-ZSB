@@ -1,11 +1,12 @@
-// Ask the user for a string and print out whether this string is a palindrome or not.
-import 'dart:io';
 void main() {
-  print("Enter the string:-");
-  String input =stdin.readLineSync()!.toLowerCase();
-  String revinput = input.split('').reversed.join('');
-  input ==revinput
-      ? print("The string is palindrome")
-      : print("The string is not palindrome");
+  List<int> a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
 
+  for (var i in a) {
+    if (i < 5) {
+      print(i);
+    }
+  }
+
+  // One liner
+  print([for (var i in a) if (i < 5) i]);
 }
